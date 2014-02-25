@@ -1,28 +1,8 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is a proof of concept for showing a 'loading' message while waiting for the server to respond with a download.
 
-Things you may want to cover:
+The meat of how it works is in the following files (with comments!):
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+app/controllers/examples_controller.rb
+app/assets/javascripts/examples.js
