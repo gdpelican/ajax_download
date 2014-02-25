@@ -1,0 +1,3 @@
+<%= content_tag :div, 'Static' %>
+<%= link_to 'Download Example', download_path(download_token: @download_token, format: :csv), data: { token: @download_token }, id: 'download' %>
+<%= content_tag :div, 'Loading...', id: 'loading' %>
