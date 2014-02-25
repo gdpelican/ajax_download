@@ -17,11 +17,12 @@ $(document).ready(function() {
 	  	if (getCookie('download_token') == downloadLink.data('token') || attempts == 0) {
 	  		//if it has (or timeout), unblock the loading message
 	  		downloadLink.add($('#loading')).toggle();
-	  		attempts--;
+	  		clearCookie('download_token');
 	  	}
 	  	else {
+	  		attempts--; 
 	  		//otherwise, try again in half a second
-	  		setTimeout(checkDownloadCookie, 500);  
+	  		setTimeout(checkDownloadCookie, 500); 
 	  	}
 	 };
     
@@ -35,7 +36,12 @@ $(document).ready(function() {
 });
 
 //I stole this from here: http://stackoverflow.com/questions/1106377/detect-when-browser-receives-file-download
-function getCookie( name ) {
+function getCookie(name) {
 	var parts = document.cookie.split(name + "=");
     if (parts.length == 2) return parts.pop().split(";").shift();
 }
+
+//and I stole this from here: http://stackoverflow.com/questions/10593013/delete-cookie-by-name
+function clearCookie(name) {
+    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+};
