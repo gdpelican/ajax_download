@@ -1,5 +1,7 @@
 == README
 
+{<img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/gdpelican/ajax_download">}[https://gitter.im/gdpelican/ajax_download?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge]
+
 This app is a proof of concept for showing a 'loading' message while waiting for the server to respond with a download.
 
 The meat of how it works is in the following files (with comments!):
